@@ -1,8 +1,8 @@
-const Product = () => {
+const Product = props => {
   return React.createElement('div', {}, [
-    React.createElement('h2', {}, 'Product 1'),
-    React.createElement('h3', {}, 'Product 1 Description'),
-    React.createElement('h3', {}, '10$'),
+    React.createElement('h2', {}, props.title),
+    React.createElement('h3', {}, props.description),
+    React.createElement('h3', {}, props.price),
   ])
 }
 
@@ -15,9 +15,21 @@ const App = () => {
       'MZ Shop!',
     ),
     // Three stamp of that product component
-    React.createElement(Product),
-    React.createElement(Product),
-    React.createElement(Product),
+    React.createElement(Product, {
+      title: 'Product 1',
+      description: 'Product 1 Desc',
+      price: '10$',
+    }),
+    React.createElement(Product, {
+      title: 'Product 2',
+      description: 'Product 2 Desc',
+      price: '20$',
+    }),
+    React.createElement(Product, {
+      title: 'Product 3',
+      description: 'Product 3 Desc',
+      price: '30$',
+    }),
   ])
 }
 
