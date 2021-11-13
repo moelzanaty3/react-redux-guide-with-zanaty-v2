@@ -1,10 +1,6 @@
-const Product = (props) => {
-  return React.createElement('div', {}, [
-    React.createElement('h2', {}, props.title),
-    React.createElement('h3', {}, props.description),
-    React.createElement('h3', {}, props.price)
-  ])
-}
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Product from './Product'
 
 const App = () => {
   return React.createElement('div', {}, [
