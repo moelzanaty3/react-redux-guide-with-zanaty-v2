@@ -1,0 +1,12 @@
+{
+  "name": "mz-shop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier --write \"src/**/*.{js,jsx}\""
+  },
+  "devDependencies": {
+    "prettier": "^2.4.1"
+  }
+}

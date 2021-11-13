@@ -1,8 +1,8 @@
-const Product = props => {
+const Product = (props) => {
   return React.createElement('div', {}, [
     React.createElement('h2', {}, props.title),
     React.createElement('h3', {}, props.description),
-    React.createElement('h3', {}, props.price),
+    React.createElement('h3', {}, props.price)
   ])
 }
 
@@ -12,24 +12,24 @@ const App = () => {
       'h1',
       /** the class is a reserved keyword in JavaScript and since we use JSX in React which itself is the extension of JavaScript, so we have to use className instead of class attribute. */
       { id: 'my-brand', className: 'logo' },
-      'MZ Shop!',
+      'MZ Shop!'
     ),
     // Three stamp of that product component
     React.createElement(Product, {
       title: 'Product 1',
       description: 'Product 1 Desc',
-      price: '10$',
+      price: '10$'
     }),
     React.createElement(Product, {
       title: 'Product 2',
       description: 'Product 2 Desc',
-      price: '20$',
+      price: '20$'
     }),
     React.createElement(Product, {
       title: 'Product 3',
       description: 'Product 3 Desc',
-      price: '30$',
-    }),
+      price: '30$'
+    })
   ])
 }
 
