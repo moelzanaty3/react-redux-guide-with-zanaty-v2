@@ -109,10 +109,6 @@ body {
 }
 
 /* ListContacts */
-.list-products {
-  padding-top: 60px;
-}
-
 .list-products-top {
   position: fixed;
   width: 100%;
