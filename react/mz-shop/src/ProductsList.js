@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
-import Product from './Product'
+import Results from './Results'
 
 export default function ProductsList() {
   const [query, setQuery] = useState('')
@@ -35,27 +35,7 @@ export default function ProductsList() {
           onChange={(event) => setQuery(event.target.value)}
         />
       </div>
-      {showingProducts.length !== products.length && (
-        <div className="showing-products">
-          <span>
-            Now showing {showingProducts.length} of {products.length}
-          </span>
-          <button onClick={this.clearQuery}>Show all</button>
-        </div>
-      )}
-      <ol className="product-list">
-        {showingProducts &&
-          showingProducts.map((product) => (
-            <Product
-              key={product.id}
-              image={product.image}
-              title={product.title}
-              description={product.description}
-              price={product.price}
-              category={product.category}
-            />
-          ))}
-      </ol>
+      <Results products={products} showingProducts={showingProducts} setQuery={setQuery} />
     </div>
   )
 }
