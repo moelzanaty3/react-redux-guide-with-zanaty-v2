@@ -1,4 +1,5 @@
 import { render } from 'react-dom'
+import { StrictMode } from 'react'
 import ProductsList from './ProductsList'
 
 const App = () => {
@@ -12,4 +13,9 @@ const App = () => {
   )
 }
 
-render(<App />, document.getElementById('root'))
+render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+  document.getElementById('root')
+)
